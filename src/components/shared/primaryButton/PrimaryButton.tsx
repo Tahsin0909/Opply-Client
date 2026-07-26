@@ -10,7 +10,7 @@ const PrimaryButton = ({
 }: {
   text?: string;
   loading?: boolean;
-  onClick: any;
+  onClick?: any;
   children?: React.ReactNode;
 }) => {
   return children ? (
@@ -29,9 +29,8 @@ const PrimaryButton = ({
     >
       <div className={`flex items-center justify-center gap-2`}>
         <Loader
-          className={`${
-            loading ? "opacity-100" : "opacity-0"
-          } animate-spin text-center absolute`}
+          className={`${loading ? "opacity-100" : "opacity-0"
+            } animate-spin text-center absolute`}
         />
         <span className={`${loading ? "opacity-0" : "opacity-100"}`}>
           {text}

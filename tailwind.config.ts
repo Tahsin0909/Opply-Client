@@ -22,7 +22,7 @@ const config: Config = {
         },
       },
       colors: {
-        primary: "#1F90FF",
+        primary: "#3937E7",
         text_shadow: "#A1A1A1",
         accent: "#31B3BA",
         secondary: "#0ACF83",
