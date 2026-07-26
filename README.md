@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Opply (Healixity)
 
-## Getting Started
+## What is this?
 
-First, run the development server:
+Opply is an online marketplace that connects people and companies who need work done with the professionals who can do it. Think of it as a hybrid between a freelance job board and a bookable consultation service — clients can either post a project and receive competitive bids from professionals, or directly book a paid one-on-one consultation with an expert, complete with live video sessions, messaging, contracts, and secure payments all handled in one place.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The platform also has a professional-services / health-and-wellness angle (the product is branded "Healixity" for its consultation side), so it works well for use cases where clients want to hire an expert either for a defined project or for ongoing advice and sessions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Who uses it?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Individual users** — freelancers, professionals, or clients signing up under their own name.
+- **Companies** — businesses that register as an organization to either hire talent or offer services at scale.
+- **Administrators** — the platform team who manage users, categories, disputes, and overall site health.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## What can people do on the platform?
 
-## Learn More
+**Finding work and talent**
+- Post a project or a job opening
+- Browse projects/jobs by category and search for relevant opportunities
+- Submit bids/proposals on projects, or apply directly to job postings
+- Save favorite jobs, projects, or professionals for later
 
-To learn more about Next.js, take a look at the following resources:
+**Getting hired and working together**
+- Once a bid is accepted, a formal agreement is created between the client and the professional, laying out the terms of the work
+- Professionals submit deliverables against the agreement as work is completed
+- Clients and professionals can message each other directly through built-in chat
+- Either side can leave a review/rating once work is finished
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Consultations and bookings**
+- Professionals can list consultation services with their own pricing and availability
+- Clients can book a session directly from a professional's calendar
+- Sessions are conducted over integrated Zoom video calls, scheduled and managed automatically
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Payments and money**
+- Secure payments are processed through Stripe, including escrow-style handling for project agreements
+- Professionals can connect their own Stripe account to receive payouts
+- Users can withdraw earned funds
+- The platform supports paid subscription plans for premium features or membership tiers
 
-## Deploy on Vercel
+**Content and discovery**
+- A built-in blog system (with its own categories) for articles, guidance, and platform news
+- A unified search function to find jobs, projects, professionals, or content
+- Personalized suggestions to help users discover relevant opportunities
+- A notification system that keeps users updated on bids, messages, bookings, and payments
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Behind the scenes**
+- An analytics dashboard gives administrators insight into platform activity and growth
+- User profiles support education and experience details, so professionals can showcase their background
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## In short
+
+Opply brings together job posting and bidding, expert consultations with video calls, secure payments and payouts, contracts, messaging, reviews, and subscriptions into a single connected platform — giving clients an easy way to find and hire trusted professionals, and giving professionals a way to find work, get booked, and get paid, all in one place.
