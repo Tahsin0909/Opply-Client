@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "sbateh-client",
+      name: "opply-client",
       script: "node_modules/next/dist/bin/next",
       args: "start",
       env: {
