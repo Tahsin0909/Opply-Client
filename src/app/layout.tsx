@@ -8,8 +8,8 @@ import { SocketProvider } from "@/context/SocketContext";
 
 export const metadata: Metadata = {
   title: {
-    default: "Healixity",
-    template: "%s | Healixity ",
+    default: "Opply",
+    template: "%s | Opply ",
   },
 };
 

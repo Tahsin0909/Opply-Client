@@ -80,7 +80,7 @@ const AgreementRequest: React.FC = () => {
         <Input
           ref={searchInput}
           placeholder={`Search ${dataIndex}`}
-          value={selectedKeys[0]}
+          value={String(selectedKeys[0] ?? "")}
           onChange={(e) =>
             setSelectedKeys(e.target.value ? [e.target.value] : [])
           }

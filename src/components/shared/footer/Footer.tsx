@@ -78,7 +78,7 @@ export default function Footer() {
 
                 {/* Copyright */}
                 <div className="pt-8 border-t border-gray-200">
-                    <p className="text-vlack text-sm">Copyright © 2025 HEALIXITY All Rights Reserved.</p>
+                    <p className="text-vlack text-sm">Copyright © 2025 Opply All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

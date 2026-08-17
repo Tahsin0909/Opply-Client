@@ -28,7 +28,7 @@ export const SocketProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     // Initialize the socket client
-    const socketInstance = io("https://api.healixity.com", {
+    const socketInstance = io("https://api.Opply.com", {
       auth: { token: Cookies.get("token") },
     });
 
