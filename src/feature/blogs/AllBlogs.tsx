@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import WithEmptyState from "@/components/others/AllState";
 import { useGetAllBlogsQuery } from "@/redux/api/blog/blogApi";
 import { Blog } from "@/interfaces/global";
+import { blogs as fallbackBlogs } from "./fakeData";
 
 const AllBlogs = () => {
   const [search, setSearch] = useState<string>("");
@@ -22,10 +23,22 @@ const AllBlogs = () => {
     searchTerm: debouncedSearch || undefined, // Use debounced search term
   });
 
-  const blogs = useMemo(() => data?.data ?? [], [data]);
-  console.log("Blogs==>>", data);
-  console.log("Blogs data", blogs);
-  console.log("In all blogs page");
+  const blogs: Blog[] = useMemo(() => {
+    if (data?.data && data.data.length > 0) {
+      return data.data;
+    }
+    const fallbackList = fallbackBlogs as unknown as Blog[];
+    if (debouncedSearch) {
+      const term = debouncedSearch.toLowerCase();
+      return fallbackList.filter(
+        (b) =>
+          b.title.toLowerCase().includes(term) ||
+          (b.category && b.category.toLowerCase().includes(term)) ||
+          b.description.toLowerCase().includes(term)
+      );
+    }
+    return fallbackList;
+  }, [data, debouncedSearch]);
 
   // Debounce search input
   useEffect(() => {
@@ -132,9 +145,11 @@ const AllBlogs = () => {
             Refresh Blogs
           </PrimaryButton>
         }
-        loading={isLoading}
+        loading={isLoading && blogs.length === 0}
         error={
-          isError
+          blogs.length > 0
+            ? undefined
+            : isError
             ? typeof error === "string"
               ? error
               : error
@@ -162,7 +177,7 @@ const AllBlogs = () => {
                 >
                   <BlogCard
                     key={idx}
-                    imageUrl={item.image}
+                    imageUrl={item.image || (item as { imageUrl?: string }).imageUrl || "/blogs/blog-1.jpg"}
                     title={item.title}
                     id={item.id}
                     slug={item.slug}

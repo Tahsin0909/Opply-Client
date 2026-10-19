@@ -3,7 +3,7 @@ import HeroHeader from "@/components/shared/header/Header";
 import React from "react";
 import blogHeader from "@/assets/header/blogHeader.png";
 import SectionTitle from "@/components/shared/sectionTitle/SectionTitle";
-import { usePathname, useRouter } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import PrimaryButton from "@/components/shared/primaryButton/PrimaryButton";
 import { MoveUpRight } from "lucide-react";
 import { motion } from "framer-motion";
@@ -14,10 +14,12 @@ import {
 } from "@/redux/api/blog/blogApi";
 import type { Blog } from "@/interfaces/global";
 import WithEmptyState from "@/components/others/AllState";
+import { blogs as fallbackBlogs } from "./fakeData";
 
 const BlogDetails = () => {
   const path = usePathname();
-  const slug = path.split("/")[2];
+  const params = useParams();
+  const slug = (params?.id as string) || path.split("/")[2];
   const router = useRouter();
 
   // Fetch blog data by slug
@@ -32,33 +34,32 @@ const BlogDetails = () => {
     page: 1,
     limit: 20,
   });
-  console.log("all blog:", allBlogs);
+
+  const fallbackBlog = React.useMemo(() => {
+    return (fallbackBlogs as unknown as Blog[]).find(
+      (b) => b.slug === slug || b.id === slug
+    );
+  }, [slug]);
 
   // Destructure myData with fallback
-  const { data: blog } = myData || {};
-  console.log("myData:", myData); // Log full myData
-  console.log("blog data:", blog); // Log the blog data specifically
+  const rawBlog = myData?.data;
+  const blog = (Array.isArray(rawBlog) ? rawBlog[0] : rawBlog) || fallbackBlog;
 
   // Destructure blog for easier access (with fallback for rendering)
-  const { title, image, description, createdAt, categoryId } = Array.isArray(
-    blog
-  )
-    ? blog?.[0] || {}
-    : (blog && (blog as Blog)) || {};
+  const { title, image, description, createdAt, categoryId } = blog || {};
 
   // Filter blogs by categoryId and exclude current blog
-  const relatedBlogPosts = (allBlogs?.data ?? [])
-    .filter(
-      (item: Blog) =>
-        item.categoryId === categoryId &&
-        item.id !==
-          (Array.isArray(blog)
-            ? blog?.[0]?.id
-            : blog
-            ? (blog as Blog).id
-            : undefined)
-    )
-    .slice(0, 6);
+  const relatedBlogPosts = React.useMemo(() => {
+    const apiPosts = (allBlogs?.data ?? []).filter(
+      (item: Blog) => item.categoryId === categoryId && item.id !== blog?.id
+    );
+    if (apiPosts.length > 0) {
+      return apiPosts.slice(0, 6);
+    }
+    return (fallbackBlogs as unknown as Blog[])
+      .filter((item: Blog) => item.categoryId === categoryId && item.id !== blog?.id)
+      .slice(0, 6);
+  }, [allBlogs, categoryId, blog]);
 
   const breadcrumbs = [
     { label: "Home", href: "/" },
@@ -77,8 +78,8 @@ const BlogDetails = () => {
           Explore All Blogs
         </PrimaryButton>
       }
-      loading={isLoading}
-      error={!!error || !blog}
+      loading={isLoading && !blog}
+      error={!blog && !isLoading && (!!error || !blog)}
       spinnerSize="lg"
       errorMessage="Failed to fetch blog details. Please try again later."
       errorTitle="Error Fetching Blog"
@@ -130,8 +131,8 @@ const BlogDetails = () => {
                   Explore All Blogs
                 </PrimaryButton>
               }
-              loading={isRelatedLoading}
-              error={isRelatedError}
+              loading={isRelatedLoading && relatedBlogPosts.length === 0}
+              error={relatedBlogPosts.length > 0 ? false : isRelatedError}
               spinnerSize="lg"
               errorMessage="Failed to fetch related blogs. Please try again later."
               errorTitle="Error Fetching Related Blogs"
@@ -151,7 +152,7 @@ const BlogDetails = () => {
                     >
                       <BlogCard
                         id={data.id}
-                        imageUrl={data.image}
+                        imageUrl={data.image || (data as { imageUrl?: string }).imageUrl || "/blogs/blog-1.jpg"}
                         title={data.title}
                         slug={data.slug}
                       />

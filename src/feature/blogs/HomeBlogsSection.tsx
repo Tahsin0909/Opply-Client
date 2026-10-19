@@ -30,7 +30,7 @@ const HomeBlogsSlider = () => {
                     subtitle="Stay updated with expert advice, industry trends, and success stories to grow your career and business."
                     title="Latest Blog and Articles"
                 />
-                <PrimaryButton onClick={() => router.push("/blogs")}>
+                <PrimaryButton onClick={() => router.push("/blog")}>
                     <div className="flex items-center justify-center gap-3 text-nowrap">
                         <p>See More</p>
                         <MoveUpRight className="w-4" />

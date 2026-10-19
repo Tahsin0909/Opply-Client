@@ -486,11 +486,12 @@ export interface Blog {
   category: string;
   description: string;
   image: string;
+  imageUrl?: string;
   createdAt: string;
   updatedAt: string;
   slug: string;
   categoryId: string;
-  categoryBlog: string;
+  categoryBlog: string | { name: string };
 }
 
 // types.ts

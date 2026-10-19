@@ -51,7 +51,7 @@ export default function AboutUs() {
                             </p>
                         </div>
 
-                        {/* Our Values / Key Pillars */}
+                        {/* Our Values / Key Pillars
                         <div>
                             <h4 className="text-xl font-semibold mb-2 text-gray-900">Our Core Pillars:</h4>
                             <ul className="list-disc list-inside text-gray-600 leading-relaxed text-sm md:text-base space-y-1">
@@ -65,7 +65,7 @@ export default function AboutUs() {
                                     <strong className="text-gray-900 font-medium">Seamless Collaboration:</strong> Real-time messaging, instant notifications, and end-to-end delivery tracking.
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
 
                         {/* Button */}
                         <div>

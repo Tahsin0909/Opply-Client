@@ -8,7 +8,6 @@ export const dmSans = DM_Sans({
 });
 
 export const robotoFlex = Roboto_Flex({
-  subsets: ["latin"], // Add subsets if needed
-  weight: ["400", "500", "600", "700"], // Specify available weights
-  variable: "--font-roboto-flex", // Define a meaningful CSS variable
+  subsets: ["latin"],
+  variable: "--font-roboto-flex",
 });
