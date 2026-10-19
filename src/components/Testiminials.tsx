@@ -118,7 +118,7 @@ const Testimonials = () => {
                             type="button"
                             aria-label="Previous testimonial"
                             onClick={() => swiperInstance?.slidePrev()}
-                            className="group flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-sm transition hover:border-primary hover:bg-primary hover:text-white"
+                            className="group flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-xs transition hover:border-primary hover:bg-primary hover:text-white"
                         >
                             <ChevronLeft
                                 size={20}
@@ -130,7 +130,7 @@ const Testimonials = () => {
                             type="button"
                             aria-label="Next testimonial"
                             onClick={() => swiperInstance?.slideNext()}
-                            className="group flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-sm transition hover:border-primary hover:bg-primary hover:text-white"
+                            className="group flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-xs transition hover:border-primary hover:bg-primary hover:text-white"
                         >
                             <ChevronRight
                                 size={20}
@@ -153,7 +153,7 @@ export function TestimonialCard({
     imageSrc,
 }: TestimonialCardProps) {
     return (
-        <article className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-sm md:p-10 lg:p-12">
+        <article className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-xs md:p-10 lg:p-12">
             <Quote
                 aria-hidden="true"
                 className="absolute right-6 top-6 h-16 w-16 text-primary/10 md:h-24 md:w-24"

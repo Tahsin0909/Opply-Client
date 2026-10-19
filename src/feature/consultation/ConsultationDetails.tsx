@@ -177,7 +177,7 @@ export default function ConsultationDetailsPage() {
               </ul>
 
               {selectedOption && (
-                <div className="p-3 bg-blue-50 rounded mb-4">
+                <div className="p-3 bg-blue-50 rounded-sm mb-4">
                   <p className="text-sm font-medium">Selected Option:</p>
                   <p className="text-sm">
                     {selectedOption.duration} minutes - ${selectedOption.price}

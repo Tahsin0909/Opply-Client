@@ -169,7 +169,7 @@ const ResumeSection: React.FC<ResumeSectionProps> = ({
         <div className="text-center py-8 border rounded-lg border-dashed">
           <p className="text-gray-500 text-sm">No resume uploaded yet.</p>
           <button
-            className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-300 flex items-center gap-2 mx-auto"
+            className="mt-2 px-4 py-2 bg-blue-600 text-white rounded-sm hover:bg-blue-700 transition-colors duration-300 flex items-center gap-2 mx-auto"
             onClick={() => setIsUploading(true)}
             type="button"
           >

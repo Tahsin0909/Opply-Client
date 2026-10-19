@@ -22,7 +22,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={onClose}
-                        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-30"
+                        className="fixed inset-0 bg-black/50 backdrop-blur-xs z-30"
                     />
 
                     {/* Modal Container */}
@@ -67,7 +67,7 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
 
                             {/* Modal Body */}
                             <div className="p-4 flex flex-col h-full md:h-auto relative">
-                                <div className="flex-grow overflow-y-auto">{children}</div>
+                                <div className="grow overflow-y-auto">{children}</div>
                             </div>
                         </div>
                     </motion.div>

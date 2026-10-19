@@ -13,7 +13,7 @@ export default function AboutUs() {
                         <Image
                             src="/about.png"
                             alt="About Opply"
-                            className="w-full rounded-lg object-cover shadow-sm"
+                            className="w-full rounded-lg object-cover shadow-xs"
                             height={793}
                             width={674}
                         />

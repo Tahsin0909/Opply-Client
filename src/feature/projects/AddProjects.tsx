@@ -183,7 +183,7 @@ export default function AddNewProject() {
             placeholder="I will do UI UX design for your mobile app design"
             {...register("name")}
             className={`w-full px-3 py-2 border ${errors.name ? "border-red-500" : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.name && (
             <p className="text-red-500 text-xs">{errors.name.message}</p>
@@ -218,7 +218,7 @@ export default function AddNewProject() {
                 value={skillInput}
                 onChange={handleSkillInputChange}
                 onFocus={() => skillInput.trim() && setShowSuggestions(true)}
-                className="w-full px-3 py-2 rounded-md focus:outline-none "
+                className="w-full px-3 py-2 rounded-md focus:outline-hidden "
               />
 
               {showSuggestions && filteredSuggestions.length > 0 && (
@@ -286,7 +286,7 @@ export default function AddNewProject() {
                 placeholder="e.g $50 - $100"
                 {...register("budget")}
                 className={`w-full px-3 py-2 border ${errors.budget ? "border-red-500" : "border-gray-300"
-                  } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+                  } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
               />
               {errors.budget && (
                 <p className="text-red-500 text-xs">{errors.budget.message}</p>
@@ -308,7 +308,7 @@ export default function AddNewProject() {
                     placeholder="e.g $50 - $100, $20 - $300/hr etc"
                     {...register("min_price")}
                     className={`w-full px-3 py-2 border ${errors.min_price ? "border-red-500" : "border-gray-300"
-                      } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+                      } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
                   />
                   {errors.min_price && (
                     <p className="text-red-500 text-xs">
@@ -329,7 +329,7 @@ export default function AddNewProject() {
                     placeholder="e.g $50 - $100, $20 - $300/hr etc"
                     {...register("max_price")}
                     className={`w-full px-3 py-2 border ${errors.max_price ? "border-red-500" : "border-gray-300"
-                      } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+                      } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
                   />
                   {errors.max_price && (
                     <p className="text-red-500 text-xs">
@@ -356,7 +356,7 @@ export default function AddNewProject() {
               placeholder="e.g. Telemedicine, HealthTech, etc."
               {...register("category")}
               className={`w-full px-3 py-2 border ${errors.category ? "border-red-500" : "border-gray-300"
-                } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+                } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             />
             {errors.category && (
               <p className="text-red-500 text-xs">{errors.category.message}</p>
@@ -372,7 +372,7 @@ export default function AddNewProject() {
               type="date"
               {...register("deadline")}
               className={`w-full px-3 py-2 border ${errors.deadline ? "border-red-500" : "border-gray-300"
-                } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+                } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             />
             {errors.deadline && (
               <p className="text-red-500 text-xs">{errors.deadline.message}</p>
@@ -390,7 +390,7 @@ export default function AddNewProject() {
             rows={4}
             {...register("goal")}
             className={`w-full px-3 py-2 border ${errors.goal ? "border-red-500" : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.goal && (
             <p className="text-red-500 text-xs">{errors.goal.message}</p>
@@ -407,7 +407,7 @@ export default function AddNewProject() {
             rows={4}
             {...register("scopeOfWork")}
             className={`w-full px-3 py-2 border ${errors.scopeOfWork ? "border-red-500" : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.scopeOfWork && (
             <p className="text-red-500 text-xs">{errors.scopeOfWork.message}</p>

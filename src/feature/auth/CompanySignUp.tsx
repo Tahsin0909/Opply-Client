@@ -115,7 +115,7 @@ export default function CompanySignUp() {
               placeholder="John"
               {...register("firstName")}
               className={`w-full px-3 py-2 border ${errors.firstName ? "border-red-500" : "border-gray-200"
-                } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+                } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             />
             {errors.firstName && (
               <p className="text-red-500 text-xs">{errors.firstName.message}</p>
@@ -133,7 +133,7 @@ export default function CompanySignUp() {
               placeholder="Doe"
               {...register("lastName")}
               className={`w-full px-3 py-2 border ${errors.lastName ? "border-red-500" : "border-gray-200"
-                } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+                } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             />
             {errors.lastName && (
               <p className="text-red-500 text-xs">{errors.lastName.message}</p>
@@ -152,7 +152,7 @@ export default function CompanySignUp() {
             placeholder="Tech Corp"
             {...register("companyName")}
             className={`w-full px-3 py-2 border ${errors.companyName ? "border-red-500" : "border-gray-200"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.companyName && (
             <p className="text-red-500 text-xs">{errors.companyName.message}</p>
@@ -169,7 +169,7 @@ export default function CompanySignUp() {
             placeholder="Details about your company"
             {...register("companyDetails")}
             className={`w-full px-3 py-2 border min-h-[100px] ${errors.companyDetails ? "border-red-500" : "border-gray-200"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.companyDetails && (
             <p className="text-red-500 text-xs">
@@ -189,7 +189,7 @@ export default function CompanySignUp() {
             placeholder="example@company.com"
             {...register("companyEmail")}
             className={`w-full px-3 py-2 border ${errors.companyEmail ? "border-red-500" : "border-gray-200"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.companyEmail && (
             <p className="text-red-500 text-xs">
@@ -210,7 +210,7 @@ export default function CompanySignUp() {
               placeholder="••••••••••"
               {...register("password")}
               className={`w-full px-3 py-2 border ${errors.password ? "border-red-500" : "border-gray-200"
-                } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+                } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             />
             <button
               type="button"
@@ -239,7 +239,7 @@ export default function CompanySignUp() {
             placeholder="••••••••••"
             {...register("confirmPassword")}
             className={`w-full px-3 py-2 border ${errors.confirmPassword ? "border-red-500" : "border-gray-200"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.confirmPassword && (
             <p className="text-red-500 text-xs">
@@ -253,7 +253,7 @@ export default function CompanySignUp() {
         {/* Sign Up Button */}
         <button
           type="submit"
-          className="w-full bg-primary/80 text-white py-2 px-4 rounded-md hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          className="w-full bg-primary/80 text-white py-2 px-4 rounded-md hover:bg-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2"
         >
           {isLoading ? "Signing Up..." : "Sign Up"}
         </button>

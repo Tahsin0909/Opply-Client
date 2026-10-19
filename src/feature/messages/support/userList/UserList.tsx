@@ -57,17 +57,17 @@
 //     <Link
 //       href={`/messaging?user=${user.id}`}
 //       onClick={() => joinChat(participant1Id, participant2Id)}
-//       className={`flex gap-3 items-center p-3 duration-200 w-full ${isActive ? "!bg-gray-200 " : "hover:!bg-gray-300"}`}
+//       className={`flex gap-3 items-center p-3 duration-200 w-full ${isActive ? "bg-gray-200! " : "hover:bg-gray-300!"}`}
 //     >
 //       <Image
-//         className="!size-[40px] !rounded-full"
+//         className="size-[40px]! rounded-full!"
 //         preview={false}
 //         src={user?.profilePicture || ""}
 //         alt={`image of ${name}`}
 //       />
 //       <div className="w-full">
 //         <div className="flex items-center justify-between w-full">
-//           <Title level={5} className="!m-0">
+//           <Title level={5} className="m-0!">
 //             {user.firstName} {user.lastName}
 //           </Title>
 //           <span className={`text-[10px] font-semibold ${isActive ? "text-icon-color" : ""}`}>
@@ -173,17 +173,17 @@ const UserCard: FC<UserCardProps & { currentUserId?: string }> = ({
     <Link
       href={`/messaging?user=${user.id}`}
       onClick={handleClick}
-      className={`flex gap-3 items-center p-3 duration-200 w-full ${isActive ? "!bg-gray-200 " : "hover:!bg-gray-300"}`}
+      className={`flex gap-3 items-center p-3 duration-200 w-full ${isActive ? "bg-gray-200! " : "hover:bg-gray-300!"}`}
     >
       <Image
-        className="!size-[40px] !rounded-full"
+        className="size-[40px]! rounded-full!"
         preview={false}
         src={user?.profilePicture || ""}
         alt={`image of ${user.firstName} ${user.lastName}`}
       />
       <div className="w-full">
         <div className="flex items-center justify-between w-full">
-          <Title level={5} className="!m-0">
+          <Title level={5} className="m-0!">
             {user.firstName} {user.lastName}
           </Title>
           <span className={`text-[10px] font-semibold ${isActive ? "text-icon-color" : ""}`}>

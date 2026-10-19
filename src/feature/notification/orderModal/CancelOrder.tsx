@@ -104,7 +104,7 @@ const CancelOrder = ({ setModalState, samplePost }: { setModalState: React.Dispa
                             placeholder="Please specify your reason "
                             value={otherReason}
                             onChange={(e) => setOtherReason(e.target.value)}
-                            className="w-full border-gray-200 p-1 outline-none"
+                            className="w-full border-gray-200 p-1 outline-hidden"
                         />
                     </div>
                 )}

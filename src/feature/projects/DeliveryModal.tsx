@@ -115,7 +115,7 @@ const Delivery = ({ id }: { id: string }) => {
           onChange={(e) => handleInputChange("message", e.target.value)}
           className={`w-full px-3 py-2 border ${
             errors.message ? "border-red-500" : "border-gray-300"
-          } rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none`}
+          } rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500 resize-none`}
         />
         {errors.message && (
           <p className="text-red-500 text-xs">{errors.message}</p>

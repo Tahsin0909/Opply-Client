@@ -165,7 +165,7 @@ export default function CompanyProfilePage() {
           {isEditing.contact ? (
             <div className="space-y-3">
               <input
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border rounded-sm"
                 value={contact.phoneNumber || ""}
                 onChange={(e) =>
                   setContact({ ...contact, phoneNumber: e.target.value })
@@ -174,7 +174,7 @@ export default function CompanyProfilePage() {
               />
               <input
                 readOnly
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border rounded-sm"
                 value={contact.email || ""}
                 onChange={(e) =>
                   setContact({ ...contact, email: e.target.value })
@@ -182,7 +182,7 @@ export default function CompanyProfilePage() {
                 type="email"
               />
               <input
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border rounded-sm"
                 value={contact.address || ""}
                 onChange={(e) =>
                   setContact({ ...contact, address: e.target.value })
@@ -228,9 +228,9 @@ export default function CompanyProfilePage() {
 //     </div>
 //     {isEditing.contact ? (
 //         <div className="space-y-3">
-//             <input className="w-full p-2 border rounded" value={contact.phone} onChange={(e) => setContact({ ...contact, phone: e.target.value })} />
-//             <input className="w-full p-2 border rounded" value={contact.email} onChange={(e) => setContact({ ...contact, email: e.target.value })} />
-//             <input className="w-full p-2 border rounded" value={contact.address} onChange={(e) => setContact({ ...contact, address: e.target.value })} />
+//             <input className="w-full p-2 border rounded-sm" value={contact.phone} onChange={(e) => setContact({ ...contact, phone: e.target.value })} />
+//             <input className="w-full p-2 border rounded-sm" value={contact.email} onChange={(e) => setContact({ ...contact, email: e.target.value })} />
+//             <input className="w-full p-2 border rounded-sm" value={contact.address} onChange={(e) => setContact({ ...contact, address: e.target.value })} />
 //         </div>
 //     ) : (
 //         <div className="space-y-3">
@@ -251,7 +251,7 @@ export default function CompanyProfilePage() {
 //         </button>
 //     </div>
 //     {isEditing.dob ? (
-//         <input className="w-full p-2 border rounded" value={dob} onChange={(e) => setDob(e.target.value)} />
+//         <input className="w-full p-2 border rounded-sm" value={dob} onChange={(e) => setDob(e.target.value)} />
 //     ) : (
 //         <p className="text-sm text-gray-700">{dob}</p>
 //     )}

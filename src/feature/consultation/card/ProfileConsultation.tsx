@@ -39,7 +39,7 @@ function ConsultationBook({
 }) {
   return (
     <div className="border-b">
-      <div className="bg-white rounded-xl shadow-sm py-6">
+      <div className="bg-white rounded-xl shadow-xs py-6">
         <div className="relative flex flex-row lg:items-center gap-4 p-3 rounded-lg shadow-lg w-full">
           <Image
             width={150}

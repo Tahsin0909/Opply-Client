@@ -35,11 +35,11 @@ const FaqItem: React.FC<{ item: FaqItem; isOpen: boolean; onClick: () => void }>
     return (
         <div className={`border-b px-4 rounded-md border-gray-200 last:border-0 ${isOpen ? "bg-gray-100" : ""}`}>
             <button
-                className="w-full py-6 text-left flex justify-between items-center focus:outline-none"
+                className="w-full py-6 text-left flex justify-between items-center focus:outline-hidden"
                 onClick={onClick}
             >
                 <span className="md:text-xl text-lg lg:text-2xl font-medium text-gray-900">{item.question}</span>
-                <span className="ml-6 flex-shrink-0 transition-all duration-300">
+                <span className="ml-6 shrink-0 transition-all duration-300">
                     {isOpen ? (
                         <div className='text-white bg-primary p-2 rounded-full'>
                             <Minus className={`w-6 h-6   ${isOpen ? "" : ""}`} />
@@ -75,7 +75,7 @@ const Faq = () => {
                 subtitle="Have questions? We've got answers! Find everything you need to know about using our platform."
             />
 
-            <div className="bg-white rounded-xl shadow-sm">
+            <div className="bg-white rounded-xl shadow-xs">
                 {faqData.map((item, index) => (
                     <motion.div
                         key={index}

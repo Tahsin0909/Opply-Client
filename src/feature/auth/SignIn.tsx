@@ -102,7 +102,7 @@ export default function SignInPage() {
             {...register("email")}
             className={`w-full px-3 py-2 border ${
               errors.email ? "border-red-500" : "border-gray-200"
-            } rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500`}
+            } rounded-md focus:outline-hidden focus:ring-1 focus:ring-blue-500`}
           />
           {errors.email && (
             <p className="text-red-500 text-xs">{errors.email.message}</p>
@@ -122,7 +122,7 @@ export default function SignInPage() {
               {...register("password")}
               className={`w-full px-3 py-2 border ${
                 errors.password ? "border-red-500" : "border-gray-200"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-blue-500`}
             />
             <button
               type="button"
@@ -144,7 +144,7 @@ export default function SignInPage() {
               id="rememberMe"
               type="checkbox"
               {...register("rememberMe")}
-              className="h-4 w-4 text-blue-500 border-gray-300 rounded focus:ring-blue-500"
+              className="h-4 w-4 text-blue-500 border-gray-300 rounded-sm focus:ring-blue-500"
             />
             <label htmlFor="rememberMe" className="ml-2 text-sm text-gray-600">
               Remember Me
@@ -161,7 +161,7 @@ export default function SignInPage() {
         {/* Login Button */}
         <button
           type="submit"
-          className="w-full bg-primary/80 text-white py-2 px-4 rounded-md hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          className="w-full bg-primary/80 text-white py-2 px-4 rounded-md hover:bg-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2"
         >
           {isLoading ? "Loading..." : "Login"}
         </button>

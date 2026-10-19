@@ -97,7 +97,7 @@ export default function ConsultationBook({
 
   return (
     <div className="border-b">
-      <div className="bg-white rounded-xl shadow-sm py-6 relative">
+      <div className="bg-white rounded-xl shadow-xs py-6 relative">
         {handleDelete && (
           <button
             onClick={handleDelete}

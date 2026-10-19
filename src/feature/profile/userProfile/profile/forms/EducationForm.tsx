@@ -177,7 +177,7 @@ const EducationForm: React.FC<EducationFormProps> = ({
           value={formData.descriptions}
           onChange={handleChange}
           rows={4}
-          className="w-full p-2 border border-gray-300 rounded"
+          className="w-full p-2 border border-gray-300 rounded-sm"
           placeholder="Describe your education, achievements, and experiences..."
         />
       </div>
@@ -185,7 +185,7 @@ const EducationForm: React.FC<EducationFormProps> = ({
       <div className="flex justify-end space-x-2">
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-300"
+          className="px-4 py-2 bg-blue-600 text-white rounded-sm hover:bg-blue-700 transition-colors duration-300"
         >
           {initialData.id ? "Update" : "Add"} Education
         </button>

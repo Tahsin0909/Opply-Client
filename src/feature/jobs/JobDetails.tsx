@@ -117,10 +117,10 @@ const JobDetails = () => {
               alt={job.jobPosition}
             />
             <div className="flex-1">
-              <Title className="!m-0 !font-medium !text-white" level={3}>
+              <Title className="m-0! font-medium! text-white!" level={3}>
                 {job.jobPosition}
               </Title>
-              <Paragraph className="mt-2 !text-white">
+              <Paragraph className="mt-2 text-white!">
                 {job.yourPosition}
               </Paragraph>
             </div>
@@ -144,11 +144,11 @@ const JobDetails = () => {
                     {item.icon}
                   </div>
                   <div>
-                    <Paragraph className="!text-white !m-0">
+                    <Paragraph className="text-white! m-0!">
                       {item.title}
                     </Paragraph>
                     <Title
-                      className="!mx-0 !mt-1 !font-semibold !text-white"
+                      className="mx-0! mt-1! font-semibold! text-white!"
                       level={5}
                     >
                       {item.description}
@@ -162,7 +162,7 @@ const JobDetails = () => {
 
         <div className="mt-6">
           <Title>About The Job</Title>
-          <Paragraph className="!text-xl">
+          <Paragraph className="text-xl!">
             {job.aboutTheJob || "No job description provided."}
           </Paragraph>
         </div>
@@ -196,7 +196,7 @@ const JobDetails = () => {
               {job.reqSkills.map((skill, idx) => (
                 <Tag
                   key={idx}
-                  className="!rounded-full px-3 !sm:px-4 !py-2 !bg-primary text-sm !sm:text-base !text-white"
+                  className="rounded-full! px-3 !sm:px-4 py-2! bg-primary! text-sm !sm:text-base text-white!"
                 >
                   {skill}
                 </Tag>
@@ -207,27 +207,27 @@ const JobDetails = () => {
 
         {(companyInfo || job.user) && (
           <div className="mt-12">
-            <Title className="!font-medium" level={3}>
+            <Title className="font-medium!" level={3}>
               About Company
             </Title>
             <div className="flex items-center gap-3">
               <Image
                 width={50}
                 height={50}
-                className="border border-gray-200 p-2 rounded-lg !size-[50px]"
+                className="border border-gray-200 p-2 rounded-lg size-[50px]!"
                 alt={
                   companyInfo?.companyName || (job.user?.firstName as string)
                 }
                 src={job.user?.profilePicture || "/default-company.png"}
               />
               <div>
-                <Title className="!m-0 !font-medium !text-gray-800" level={4}>
+                <Title className="m-0! font-medium! text-gray-800!" level={4}>
                   {companyInfo?.companyName ||
                     `${job.user?.firstName} ${job.user?.lastName}`}
                 </Title>
               </div>
             </div>
-            <Paragraph className="!text-xl mt-4">
+            <Paragraph className="text-xl! mt-4">
               {companyInfo?.companyDetails ||
                 "No company description provided."}
             </Paragraph>

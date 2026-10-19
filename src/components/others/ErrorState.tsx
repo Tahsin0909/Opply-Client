@@ -26,7 +26,7 @@ const ErrorState: React.FC<ErrorStateProps> = ({
     <div className="flex flex-col items-center justify-center py-16 px-4">
       <div className=" rounded-xl p-8 max-w-md w-full text-center border shadow-lg">
         {/* Error icon */}
-        <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+        <div className="w-16 h-16 mx-auto mb-4 bg-linear-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
           <svg
             className="w-8 h-8 text-white"
             fill="none"

@@ -30,12 +30,12 @@ const JobsFilter = ({
   return (
     <div>
       <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between mb-4 md:mb-8 lg:mb-12">
-        <div className="relative flex items-center gap-2 bg-white rounded-full p-1 lg:p-2 shadow-sm w-full max-w-md lg:max-w-xl border">
+        <div className="relative flex items-center gap-2 bg-white rounded-full p-1 lg:p-2 shadow-xs w-full max-w-md lg:max-w-xl border">
           <Search className="w-5 h-5 text-gray-400 ml-2" />
           <input
             type="text"
             placeholder="Search work"
-            className="flex-1 outline-none px-2 text-sm"
+            className="flex-1 outline-hidden px-2 text-sm"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             onFocus={() => setIsFocused(true)}

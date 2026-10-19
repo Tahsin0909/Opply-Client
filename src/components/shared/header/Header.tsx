@@ -34,7 +34,7 @@ export default function HeroHeader({
       />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/60 to-black/20" />
 
       {/* Content */}
       <div className="relative h-full w-full">

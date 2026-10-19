@@ -76,7 +76,7 @@ const PaymentPage = () => {
   const formatAmount = (amount: number) => {
     const [integer, decimal = "00"] = amount.toFixed(2).split(".");
     return (
-      <Title className="!leading-0 !m-0">
+      <Title className="leading-0! m-0!">
         ${integer}.<span className="text-icon-color">{decimal}</span>
       </Title>
     );
@@ -84,14 +84,14 @@ const PaymentPage = () => {
 
   return (
     <div className="container section-gap">
-      <Title className="!font-medium">Payment</Title>
+      <Title className="font-medium!">Payment</Title>
       <div className="mt-6">
         <Row gutter={[20, 20]}>
           {walletItems.map((item) => (
             <Col key={item.id} xs={24} md={8}>
-              <div className="border !border-primary rounded-xl p-6 bg-white shadow-sm flex items-center justify-between">
+              <div className="border border-primary! rounded-xl p-6 bg-white shadow-xs flex items-center justify-between">
                 <div>
-                  <Paragraph className="!text-icon-color !font-medium !text-lg">
+                  <Paragraph className="!text-icon-color font-medium! text-lg!">
                     {item.title}
                   </Paragraph>
                   {formatAmount(item.amount)}
@@ -126,7 +126,7 @@ const PaymentPage = () => {
         </Row>
       </div>
       <div className="mt-6">
-        <Title className="!font-medium">Payment History</Title>
+        <Title className="font-medium!">Payment History</Title>
         <PaymentTable />
       </div>
     </div>

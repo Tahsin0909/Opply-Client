@@ -60,7 +60,7 @@ const BlogsSlider = () => {
                     height={900}
                     className="object-cover group-hover:scale-110 transition-all duration-300 w-full xl:min-h-[640px] lg:min-h-[450px] md:min-h-[500px] h-[400px] rounded-lg"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-black/10 rounded-lg" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/40 to-black/10 rounded-lg" />
                   <div className="absolute bottom-0 left-0 p-6 md:p-8 space-y-2 ">
                     <time className="text-sm text-gray-200 font-medium">{post.date}</time>
                     <h2 className="text-2xl lg:text-2xl xl:text-4xl font-bold text-white max-w-2xl">{post.title}</h2>
@@ -77,7 +77,7 @@ const BlogsSlider = () => {
               href={`/blog/${post.slug}`}
               className={`flex group items-center justify-center gap-4 p-4 rounded-lg hover:bg-gray-100 transition-colors ${currentImage === (Number.parseInt(post.id) - 1) ? "bg-gray-100" : ""}`}
             >
-              <div className="relative xl:w-40 lg:w-28 w-20 h-20 lg:h-28 xl:h-40 flex-shrink-0 overflow-hidden">
+              <div className="relative xl:w-40 lg:w-28 w-20 h-20 lg:h-28 xl:h-40 shrink-0 overflow-hidden">
                 <Image
                   src={post.image || "/placeholder.svg"}
                   alt={post.title}

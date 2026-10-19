@@ -65,7 +65,7 @@ function AddBookingForm({
   };
 
   return (
-    <div className="w-full max-w-4xl bg-white rounded-lg shadow-sm border border-gray-200">
+    <div className="w-full max-w-4xl bg-white rounded-lg shadow-xs border border-gray-200">
       <div className="p-6">
         <h2 className="text-xl font-semibold text-gray-800 mb-6">
           Weekly hours
@@ -80,7 +80,7 @@ function AddBookingForm({
                   id={`day-${day}`}
                   checked={schedule[day]?.enabled || false}
                   onChange={() => toggleDay(day)}
-                  className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                  className="h-4 w-4 rounded-sm border-gray-300 text-blue-600 focus:ring-blue-500"
                 />
                 <label
                   htmlFor={`day-${day}`}
@@ -99,7 +99,7 @@ function AddBookingForm({
                         onChange={(e) =>
                           updateTime(day, "startTime", e.target.value)
                         }
-                        className={`px-3 py-2 border rounded-md text-sm w-32 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 ${
+                        className={`px-3 py-2 border rounded-md text-sm w-32 focus:outline-hidden focus:ring-1 focus:ring-blue-500 focus:border-blue-500 ${
                           !validateTimeRange(
                             schedule[day].startTime,
                             schedule[day].endTime
@@ -122,7 +122,7 @@ function AddBookingForm({
                         onChange={(e) =>
                           updateTime(day, "endTime", e.target.value)
                         }
-                        className={`px-3 py-2 border rounded-md text-sm w-32 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500 ${
+                        className={`px-3 py-2 border rounded-md text-sm w-32 focus:outline-hidden focus:ring-1 focus:ring-blue-500 focus:border-blue-500 ${
                           !validateTimeRange(
                             schedule[day].startTime,
                             schedule[day].endTime

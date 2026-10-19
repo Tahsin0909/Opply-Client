@@ -98,7 +98,7 @@ export default function ResetPasswordPage() {
               placeholder="••••••••••"
               {...register("password")}
               className={`w-full px-3 py-2 border ${errors.password ? "border-red-500" : "border-gray-200"
-                } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+                } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             />
             <button
               type="button"
@@ -127,7 +127,7 @@ export default function ResetPasswordPage() {
             placeholder="••••••••••"
             {...register("confirmPassword")}
             className={`w-full px-3 py-2 border ${errors.confirmPassword ? "border-red-500" : "border-gray-200"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.confirmPassword && (
             <p className="text-red-500 text-xs">
@@ -141,7 +141,7 @@ export default function ResetPasswordPage() {
         {/* Sign Up Button */}
         <button
           type="submit"
-          className="w-full bg-primary/80 text-white py-2 px-4 rounded-md hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          className="w-full bg-primary/80 text-white py-2 px-4 rounded-md hover:bg-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2"
         >
           Reset
         </button>

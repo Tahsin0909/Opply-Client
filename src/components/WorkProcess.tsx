@@ -10,7 +10,7 @@ const ProcessCard = ({
   title: string;
   steps: Array<{ number: string; title: string; description: string }>;
 }) => (
-  <div className="bg-gray-100 rounded-lg p-6 shadow-sm">
+  <div className="bg-gray-100 rounded-lg p-6 shadow-xs">
     <h2 className="text-xl md:text-2xl xl:text-3xl font-semibold mb-6">
       {title}
     </h2>

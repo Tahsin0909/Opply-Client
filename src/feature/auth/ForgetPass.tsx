@@ -73,7 +73,7 @@ export default function ForgetPassPage() {
             {...register("email")}
             className={`w-full px-3 py-2 border ${
               errors.email ? "border-red-500" : "border-gray-200"
-            } rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500`}
+            } rounded-md focus:outline-hidden focus:ring-1 focus:ring-blue-500`}
           />
           {errors.email && (
             <p className="text-red-500 text-xs">{errors.email.message}</p>
@@ -83,7 +83,7 @@ export default function ForgetPassPage() {
         {/* Login Button */}
         <button
           type="submit"
-          className="w-full bg-primary/80 text-white py-2 px-4 rounded-md hover:bg-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          className="w-full bg-primary/80 text-white py-2 px-4 rounded-md hover:bg-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2"
         >
           {isLoading ? "Loading..." : "Send OTP"}
         </button>

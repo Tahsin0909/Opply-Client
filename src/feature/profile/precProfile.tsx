@@ -99,7 +99,7 @@ export default function ProfilePage() {
                     </div>
                     {isEditing.bio ? (
                         <textarea
-                            className="w-full p-2 border rounded"
+                            className="w-full p-2 border rounded-sm"
                             value={profile.bio}
                             onChange={(e) => handleChange("bio", e.target.value)}
                         />

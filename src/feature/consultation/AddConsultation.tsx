@@ -178,7 +178,7 @@ export default function AddConsultation() {
             {...register("title")}
             className={`w-full px-3 py-2 border ${
               errors.title ? "border-red-500" : "border-gray-300"
-            } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+            } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.title && (
             <p className="text-red-500 text-xs">{errors.title.message}</p>
@@ -220,7 +220,7 @@ export default function AddConsultation() {
                 value={skillInput}
                 onChange={handleSkillInputChange}
                 onFocus={() => skillInput.trim() && setShowSuggestions(true)}
-                className="w-full px-3 py-2 rounded-md focus:outline-none "
+                className="w-full px-3 py-2 rounded-md focus:outline-hidden "
               />
 
               {showSuggestions && filteredSuggestions.length > 0 && (
@@ -260,7 +260,7 @@ export default function AddConsultation() {
               {...register("pricing30")}
               className={`w-full px-3 py-2 border ${
                 errors.pricing30 ? "border-red-500" : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             />
             {errors.pricing30 && (
               <p className="text-red-500 text-xs">{errors.pricing30.message}</p>
@@ -277,7 +277,7 @@ export default function AddConsultation() {
               {...register("pricing60")}
               className={`w-full px-3 py-2 border ${
                 errors.pricing60 ? "border-red-500" : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             />
             {errors.pricing60 && (
               <p className="text-red-500 text-xs">{errors.pricing60.message}</p>
@@ -298,7 +298,7 @@ export default function AddConsultation() {
             {...register("description")}
             className={`w-full px-3 py-2 border ${
               errors.description ? "border-red-500" : "border-gray-300"
-            } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+            } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.description && (
             <p className="text-red-500 text-xs">{errors.description.message}</p>

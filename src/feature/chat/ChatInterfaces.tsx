@@ -49,7 +49,7 @@ export default function ChatInterface() {
                             key={chat.id}
                             className="w-full text-left p-4 hover:bg-accent transition-colors border-b flex items-start space-x-3"
                         >
-                            <div className="relative h-10 w-10 flex-shrink-0">
+                            <div className="relative h-10 w-10 shrink-0">
                                 <Image
                                     src={chat.avatar || "/placeholder.svg"}
                                     alt={chat.name}

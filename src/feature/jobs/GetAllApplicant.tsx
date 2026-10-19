@@ -53,10 +53,10 @@ const GetAllApplicant = () => {
             alt={data?.data.companyName || ""}
           />
           <div className="flex-1">
-            <Title className="!m-0 !font-medium !text-white" level={3}>
+            <Title className="m-0! font-medium! text-white!" level={3}>
               {data?.data.jobPosition}
             </Title>
-            <Paragraph className="mt-2 !text-white">
+            <Paragraph className="mt-2 text-white!">
               {data?.data.yourPosition}
             </Paragraph>
           </div>

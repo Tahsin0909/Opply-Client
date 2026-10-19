@@ -160,7 +160,7 @@ export default function OtpVerification() {
                 type="text"
                 inputMode="numeric"
                 maxLength={1}
-                className={`h-14 w-14 rounded-md border border-gray-300 text-center text-xl focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 ${activeInput === index
+                className={`h-14 w-14 rounded-md border border-gray-300 text-center text-xl focus:border-blue-500 focus:outline-hidden focus:ring-1 focus:ring-blue-500 ${activeInput === index
                   ? "border-blue-500 ring-1 ring-blue-500"
                   : ""
                   }`}
@@ -181,7 +181,7 @@ export default function OtpVerification() {
 
           <Button
             type="submit"
-            className="w-full bg-blue-500 py-2 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            className="w-full bg-blue-500 py-2 text-white hover:bg-blue-600 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             disabled={isSubmitting}
           >
             {isSubmitting ? "Verifying..." : "Submit"}

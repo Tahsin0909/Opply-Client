@@ -177,7 +177,7 @@ export default function AddJobs() {
             {...register("jobPosition")}
             className={`w-full px-3 py-2 border ${
               errors.jobPosition ? "border-red-500" : "border-gray-300"
-            } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+            } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.jobPosition && (
             <p className="text-red-500 text-xs">{errors.jobPosition.message}</p>
@@ -194,7 +194,7 @@ export default function AddJobs() {
             {...register("yourPosition")}
             className={`w-full px-3 py-2 border ${
               errors.yourPosition ? "border-red-500" : "border-gray-300"
-            } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+            } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.yourPosition && (
             <p className="text-red-500 text-xs">
@@ -217,7 +217,7 @@ export default function AddJobs() {
               onChange={(e) => setSelectCategory(e.target.value)}
               className={`w-full px-3 py-2 border ${
                 errors.jobCategorySlug ? "border-red-500" : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             >
               <option value="" disabled>
                 Select a category
@@ -247,7 +247,7 @@ export default function AddJobs() {
               {...register("subCategorySlug")}
               className={`w-full px-3 py-2 border ${
                 errors.subCategorySlug ? "border-red-500" : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             >
               <option value="" disabled>
                 Select a subcategory
@@ -282,7 +282,7 @@ export default function AddJobs() {
               {...register("location")}
               className={`w-full px-3 py-2 border ${
                 errors.location ? "border-red-500" : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             />
             {errors.location && (
               <p className="text-red-500 text-xs">{errors.location.message}</p>
@@ -300,7 +300,7 @@ export default function AddJobs() {
               {...register("jobType")}
               className={`w-full px-3 py-2 border ${
                 errors.jobType ? "border-red-500" : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             />
             {errors.jobType && (
               <p className="text-red-500 text-xs">{errors.jobType.message}</p>
@@ -319,7 +319,7 @@ export default function AddJobs() {
               {...register("salaryRange")}
               className={`w-full px-3 py-2 border ${
                 errors.salaryRange ? "border-red-500" : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             />
             {errors.salaryRange && (
               <p className="text-red-500 text-xs">
@@ -339,7 +339,7 @@ export default function AddJobs() {
               {...register("experienceLevel")}
               className={`w-full px-3 py-2 border ${
                 errors.experienceLevel ? "border-red-500" : "border-gray-300"
-              } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+              } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
             />
             {errors.experienceLevel && (
               <p className="text-red-500 text-xs">
@@ -360,7 +360,7 @@ export default function AddJobs() {
             {...register("aboutTheJob")}
             className={`w-full px-3 py-2 border ${
               errors.aboutTheJob ? "border-red-500" : "border-gray-300"
-            } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+            } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.aboutTheJob && (
             <p className="text-red-500 text-xs">{errors.aboutTheJob.message}</p>
@@ -377,7 +377,7 @@ export default function AddJobs() {
             {...register("responsibilities")}
             className={`w-full px-3 py-2 border ${
               errors.responsibilities ? "border-red-500" : "border-gray-300"
-            } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+            } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.responsibilities && (
             <p className="text-red-500 text-xs">
@@ -397,7 +397,7 @@ export default function AddJobs() {
             {...register("reqQualifications")}
             className={`w-full px-3 py-2 border ${
               errors.reqQualifications ? "border-red-500" : "border-gray-300"
-            } rounded-md focus:outline-none focus:ring-1 focus:ring-primary`}
+            } rounded-md focus:outline-hidden focus:ring-1 focus:ring-primary`}
           />
           {errors.reqQualifications && (
             <p className="text-red-500 text-xs">
@@ -433,7 +433,7 @@ export default function AddJobs() {
                 value={skillInput}
                 onChange={handleSkillInputChange}
                 onFocus={() => skillInput.trim() && setShowSuggestions(true)}
-                className="w-full px-3 py-2 rounded-md focus:outline-none "
+                className="w-full px-3 py-2 rounded-md focus:outline-hidden "
               />
 
               {showSuggestions && filteredSuggestions.length > 0 && (

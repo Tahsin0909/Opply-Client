@@ -29,7 +29,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
 }) => {
   return (
     <div className="border-b">
-      <div className="bg-white rounded-xl shadow-sm py-6">
+      <div className="bg-white rounded-xl shadow-xs py-6">
         <div className="flex sm:flex-row flex-col  lg:items-center justify-between gap-6">
           <div className="relative flex  lg:items-start gap-6">
             <Image

@@ -179,7 +179,7 @@ export const BidNowModal = ({
             id="bidAmount"
             value={bidAmount}
             onChange={(e) => setBidAmount(e.target.value)}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-secondary"
             placeholder="Enter your bid amount"
             min="1"
           />

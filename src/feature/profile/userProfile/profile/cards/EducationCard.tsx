@@ -22,11 +22,11 @@ const EducationCard: React.FC<EducationCardProps> = ({
   return (
     <div className="p-4 border rounded-lg hover:shadow-md transition-shadow duration-300 group">
       <div className="flex gap-4">
-        <div className="w-12 h-12 flex-shrink-0">
+        <div className="w-12 h-12 shrink-0">
           <img
             src={placeholderImage}
             alt={education.institute}
-            className="w-full h-full object-cover rounded"
+            className="w-full h-full object-cover rounded-sm"
           />
         </div>
         <div className="flex-1">

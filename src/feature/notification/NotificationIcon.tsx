@@ -157,7 +157,7 @@ const NotificationIcon = ({ notifications }: NotificationIconProps) => {
               }`}
             >
               <div className="flex items-start gap-3">
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <Image
                     width={40}
                     height={40}
@@ -186,7 +186,7 @@ const NotificationIcon = ({ notifications }: NotificationIconProps) => {
                     {new Date(notification.createdAt).toLocaleString()}
                   </time>
                 </div>
-                <div className="flex-shrink-0">
+                <div className="shrink-0">
                   <CheckCheck
                     className={`w-4 h-4 ${
                       notification.isRead ? "text-gray-400" : "text-green-500"

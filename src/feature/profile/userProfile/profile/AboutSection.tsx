@@ -71,7 +71,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
       {isEditing || loading ? (
         <div className="space-y-2">
           <textarea
-            className="w-full p-2 border rounded resize-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300"
+            className="w-full p-2 border rounded-sm resize-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-300"
             value={editedBio}
             onChange={(e) => setEditedBio(e.target.value)}
             rows={5}

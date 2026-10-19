@@ -90,7 +90,7 @@ const Navbar = () => {
                     </span>
 
                     <div className="absolute transform origin-top-left scale-0 group-hover:scale-100  transition-transform  top-full -left-2/3 flex flex-col gap-2 p-7 min-w-48 rounded-lg  text-black bg-transparent z-50 ">
-                      <div className=" navSubLinkTwo  bg-slate-200 p-[1px]  ">
+                      <div className=" navSubLinkTwo  bg-slate-200 p-px  ">
                         <div className=" navSubLinkTwo  bg-slate-100 p-[2px]  ">
                           <div className=" navSubLinkTwo  bg-slate-50 p-[3px]  ">
                             <ul className=" bg-white  navSubLinkTwo ">
@@ -142,7 +142,7 @@ const Navbar = () => {
                   </div>
                 </div>
                 <div className="absolute transform origin-top-left scale-0 group-hover:scale-100 transition-transform top-full -left-48 flex flex-col gap-2 p-4 min-w-72 lg:min-w-80 rounded-lg text-black bg-transparent z-50">
-                  <div className="navSubLink bg-slate-200 p-[1px]">
+                  <div className="navSubLink bg-slate-200 p-px">
                     <div className="navSubLink bg-slate-100 p-[2px]">
                       <div className="navSubLink bg-slate-50 p-[3px]">
                         <ul className="bg-white navSubLink">
@@ -169,9 +169,9 @@ const Navbar = () => {
                   className="w-12 h-12 rounded-full object-cover"
                 />
 
-                <div className="absolute transform origin-top-left scale-0 group-hover:scale-100  transition-transform  top-10 -left-[110PX] lg:-left-24 flex flex-col gap-2 p-3 lg:p-4 min-w-28 md:min-w-36 lg:min-w-52 rounded-lg  text-black bg-transparent z-50 ">
-                  <div className=" navSubLink  bg-slate-200 p-[1px] ">
-                    <div className=" navSubLink  bg-slate-100 p-[1px]  ">
+                <div className="absolute transform origin-top-left scale-0 group-hover:scale-100  transition-transform  top-10 left-[-110PX] lg:-left-24 flex flex-col gap-2 p-3 lg:p-4 min-w-28 md:min-w-36 lg:min-w-52 rounded-lg  text-black bg-transparent z-50 ">
+                  <div className=" navSubLink  bg-slate-200 p-px ">
+                    <div className=" navSubLink  bg-slate-100 p-px  ">
                       <div className=" navSubLink  bg-slate-50 p-[2px]  ">
                         <ul className=" bg-white  navSubLink ">
                           <div className="md:px-4 px-2 pt-4 pb-2">

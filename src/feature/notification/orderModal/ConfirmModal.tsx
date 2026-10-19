@@ -66,7 +66,7 @@ const ConfirmModal = ({ setModalState, samplePost }: { setModalState: React.Disp
                         onClick={() => setRating(star)}
                         onMouseEnter={() => setHoveredStar(star)}
                         onMouseLeave={() => setHoveredStar(0)}
-                        className="focus:outline-none"
+                        className="focus:outline-hidden"
                     >
                         <Star
                             className={`w-8 h-8 ${star <= (hoveredStar || rating) ? "fill-[#FF9B42] stroke-[#FF9B42]" : "fill-none stroke-[#FF9B42]"
@@ -84,7 +84,7 @@ const ConfirmModal = ({ setModalState, samplePost }: { setModalState: React.Disp
                     value={review}
                     onChange={(e) => setReview(e.target.value)}
                     placeholder="Best Talented person........."
-                    className="w-full min-h-[120px] p-4 border border-[#E5E7EB] rounded-lg focus:outline-none focus:ring-1 focus:ring-[#00BA88] resize-none text-[#333]"
+                    className="w-full min-h-[120px] p-4 border border-[#E5E7EB] rounded-lg focus:outline-hidden focus:ring-1 focus:ring-[#00BA88] resize-none text-[#333]"
                 />
             </div>
             {/* CTA Buttons */}

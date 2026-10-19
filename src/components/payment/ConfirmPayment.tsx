@@ -69,7 +69,7 @@ const PaymentConfirmation = () => {
               </div>
 
               {/* Main icon */}
-              <div className="relative bg-purple-500 bg-opacity-20 backdrop-blur rounded-full p-6 mx-auto w-fit">
+              <div className="relative bg-purple-500 bg-opacity-20 backdrop-blur-sm rounded-full p-6 mx-auto w-fit">
                 <CheckCircle
                   size={60}
                   className="text-purple-400 mx-auto"

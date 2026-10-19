@@ -15,7 +15,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 function Banner() {
     return (
         <AnimatePresence >
-            <div className=" bg-primary/10 ">
+            <div className="bg-primary/10">
                 <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-end ">
                         {/* Left Column - Content */}
@@ -40,12 +40,12 @@ function Banner() {
                             </p>
 
                             {/* Search Bar */}
-                            <div className="flex items-center gap-2 bg-white rounded-full  p-1 lg:p-2 shadow-sm max-w-xl">
+                            <div className="flex items-center gap-2 bg-white rounded-full  p-1 lg:p-2 shadow-xs max-w-xl">
                                 <Search className="w-5 h-5 text-gray-400 ml-2" />
                                 <input
                                     type="text"
                                     placeholder="Search work"
-                                    className="flex-1 outline-none px-2"
+                                    className="flex-1 outline-hidden px-2"
                                 />
                                 <PrimaryButton onClick={() => { }} text='Search' />
                             </div>

@@ -16,7 +16,7 @@ const PrimaryButton = ({
   return children ? (
     <div
       onClick={onClick}
-      className="px-2 cursor-pointer text-center py-2 rounded-full bg-primary/80 transition-all duration-300 text-white hover:bg-primary shadow"
+      className="px-2 cursor-pointer text-center py-2 rounded-full bg-primary/80 transition-all duration-300 text-white hover:bg-primary shadow-sm"
     >
       {children}
     </div>
@@ -25,7 +25,7 @@ const PrimaryButton = ({
       type="submit"
       disabled={loading}
       onClick={onClick}
-      className="px-3 py-2 text-center rounded-full bg-primary/80 transition-all duration-300 text-white hover:bg-primary shadow cursor-pointer"
+      className="px-3 py-2 text-center rounded-full bg-primary/80 transition-all duration-300 text-white hover:bg-primary shadow-sm cursor-pointer"
     >
       <div className={`flex items-center justify-center gap-2`}>
         <Loader
